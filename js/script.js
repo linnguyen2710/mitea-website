@@ -6,13 +6,6 @@ document.querySelector('#menu-btn').onclick = () =>{
     cartItem.classList.remove('active');
 }
 
-let searchForm = document.querySelector('.search-form');
-
-document.querySelector('#search-btn').onclick = () =>{
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-    cartItem.classList.remove('active');
-}
 
 let cartItem = document.querySelector('.cart-items-container');
 
@@ -28,3 +21,16 @@ window.onscroll = () =>{
     cartItem.classList.remove('active');
 }
 
+  document.getElementById('sign').addEventListener('click', function() {
+    if (!Swal.isVisible()) {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Đã đăng kí thành công!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+  }
+  });
+
+  

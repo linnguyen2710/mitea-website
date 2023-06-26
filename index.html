@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VKU COFFEE | Double Anh</title>
+    <title>Mitea Website</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script> 
+    $(document).ready(function () {
+  $('.read-more').click(function (e) {
+      e.preventDefault();
+      var contentDiv = $(this).prev('.content');
+      contentDiv.toggle();
+      if (contentDiv.is(':visible')) {
+          $(this).text('Thu gọn');
+      } else {
+          $(this).text('Hiển thị thêm');
+      }
+  });
+});
+    </script>
 
 </head>
 
@@ -26,82 +42,46 @@
         <nav class="navbar">
             <a href="#home">Trang Chủ</a>
             <a href="#about">About</a>
-            <a href="#menu">Thực Đơn</a>
-            <a href="#products">Sản Phẩm</a>
+            <a href="#menu">Đồ uống</a>
+            <a href="#products">Best Seller</a>
             <a href="#review">Đánh Giá</a>
             <a href="#contact">Liên Hệ</a>
-            <a href="#blogs">Blogs</a>
-            <a href="#commit">Cam Kết</a>
+    
         </nav>
 
         <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
+            <div style="display:none" class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
             <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="Tìm kiếm...">
-            <label for="search-box" class="fas fa-search"></label>
+            <a href="./Login.html"> <div class="fa-solid fa-user" id="user-btn"></div>
+            </a>
+           
         </div>
 
         <div class="cart-items-container">
-
-            <!-- <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cart-item-2.jpg" alt="">
-            <div class="content">
-                <h3>Hạt Dưa</h3>
-                <div class="price">10.000VND/-</div>
-            </div>
-        </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cart-item-3.jpg" alt="">
-            <div class="content">
-                <h3>Khô Bò</h3>
-                <div class="price">15.000VND/-</div>
-            </div>
-        </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="images/cart-item-4.jpg" alt="">
-            <div class="content">
-                <h3>Khô Gà</h3>
-                <div class="price">15.000VND/-</div>
-            </div>
-        </div> -->
             <a href="#" class="btn">Mua Ngay</a>
         </div>
+       
 
     </header>
     <section class="home" id="home">
-
-        <div class="content">
-            <h3>Cà Phê vào buổi sáng</h3>
-            <p>Uống một tách cafe buổi sáng 1 giờ trước khi làm việc hay học tập sẽ giúp tối ưu hiệu suất công việc của
-                bạn rất nhiều.</p>
-            <a href="#" class="btn">Mua ngay</a>
-        </div>
-
     </section>
     <section class="about" id="about">
 
-        <h1 class="heading"> <span>Về</span> Chúng Tôi </h1>
+        <h1 class="heading"> <span>Giới </span> Thiệu  </h1>
 
         <div class="row">
 
             <div class="image">
-                <img src="images/about-img.jpeg" alt="">
+                <img src="images/home.png" alt="" width="100" height="550">
             </div>
 
             <div class="content">
-                <h3>Điều làm cho cà phê của chúng tôi đặc biệt.</h3>
-                <p>Cà phê luôn luôn được làm từ hạt Robusta. Hạt cà phê thường được sử dụng là Arabica, vì đây là loại
-                    cà phê chính được xuất khẩu từ Brazil, quốc gia xuất khẩu cà phê lớn nhất thế giới. Việt Nam là quốc
-                    gia xuất khẩu cà phê thứ hai thế giới, nhưng chủ yếu là loại hạt cà phê Robusta</p>
-                <p>Robusta là loại hạt truyền thống và là một trong những loại cà phê rẻ (vì một vài lý do rõ ràng).</p>
-                <a href="#" class="btn">Đọc Thêm</a>
+                <h3>MiTea</h3>
+                <p>MiTea là MilkTea sau khi mở rộng đồ uống theo nhu cầu của khách hàng. <br>Là cách chơi chữ với hai nghĩa "Milk Tea" và "My Tea".</p>
+                <p style="display:none">"Còn nhỏ mê sữa, trưởng thành thích bia,<br> về già thích trà, vấp ngã thích cà phê."</p>
+                <button class="btnp readmore">Khẩu hiệu</button>
+
             </div>
 
         </div>
@@ -110,84 +90,122 @@
 
     <section class="menu" id="menu">
 
-        <h1 class="heading"> Thực Đơn <span>của chúng tôi</span> </h1>
+        <h1 class="heading"> Đồ uống <span>của MiteA</span> </h1>
 
         <div class="box-container">
 
             <div class="box">
-                <img src="images/menu-1.jpg" alt="">
-                <h3>Cà Phê sữa chua</h3>
-                <div class="price">13.000VND <span>18.000</span></div>
+                <img src="images/milo.webp" alt="">
+                <h3>Milo Dầm</h3>
+                <div class="price">35.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
 
             <div class="box">
-                <img src="images/menu-2.jpg" alt="">
-                <h3>Espresso</h3>
-                <div class="price">15.000VND <span>18.000</span></div>
+                <img src="images/trachanh1.jpg" alt="">
+                <h3>Trà chanh soda </h3>
+                <div class="price">25.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
 
             <div class="box">
-                <img src="images/menu-3.jpg" alt="">
-                <h3>Cappuccino</h3>
-                <div class="price">22.000VND <span>25.000</span></div>
+                <img src="images/bacsiu1.jpg" alt="">
+                <h3>Bạc xỉu</h3>
+                <div class="price">20.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
 
             <div class="box">
-                <img src="images/menu-4.jpg" alt="">
-                <h3>Latte</h3>
-                <div class="price">23.000VND <span>25.000</span></div>
+                <img src="images/tradaocam1.jpeg" alt="">
+                <h3>Trà đào cam </h3>
+                <div class="price">25.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
 
             <div class="box">
-                <img src="images/menu-5.jpg" alt="">
-                <h3>Cà phê đen</h3>
-                <div class="price">10.000VND <span>13.000</span></div>
+                <img src="images/suachuadau.png" alt="">
+                <h3>Sữa Chua Dâu Tây</h3>
+                <div class="price">25.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
 
             <div class="box">
-                <img src="images/menu-6.jpg" alt="">
-                <h3>Cà phê sữa đá</h3>
-                <div class="price">9.000VND <span>10.000</span></div>
+                <img src="images/nuocepdua.png" alt="">
+                <h3>Nước ép dưa hấu</h3>
+                <div class="price">30.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
             <div class="box">
-                <img src="images/menu-7.jpg" alt="">
-                <h3>Cà Phê trắng</h3>
-                <div class="price">18.000VND <span>20.000</span></div>
+                <img src="images/nuocepbuoi.png" alt="">
+                <h3>Nước ép bưởi</h3>
+                <div class="price">35.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
             <div class="box">
-                <img src="images/menu-8.jpg" alt="">
-                <h3>Cà Phê Mocha</h3>
-                <div class="price">23.000VND <span>25.000</span></div>
+                <img src="images/trasua.png" alt="">
+                <h3>Trà sữa truyền thống</h3>
+                <div class="price">20.000VNĐ</div>
                 <button class="btn">Thêm Vào Giỏ Hàng</button>
             </div>
+            <!-- btn readmore  -->
 
+              <!-- Nội dung bổ sung -->
+            
         </div>
-
+        <div>
+            <div class="content" style="display: none" >
+                <section class="mn"> 
+                    <div class="box-container bct ">
+                        <div class="box b1">
+                            <img src="images/tradao.png" alt="">
+                            <h3>Trà Đào</h3>
+                            <div class="price">25.000VNĐ</div>
+                            <button class="btn">Thêm Vào Giỏ Hàng</button>
+                        </div>
+            
+                        <div class="box b1">
+                            <img src="images/traque.png" alt="">
+                            <h3>Trà quế soda </h3>
+                            <div class="price">25.000VNĐ</div>
+                            <button class="btn">Thêm Vào Giỏ Hàng</button>
+                        </div>
+            
+                        <div class="box b1">
+                            <img src="images/caramel.png" alt="">
+                            <h3>Trà sữa caramel</h3>
+                            <div class="price">30.000VNĐ</div>
+                            <button class="btn">Thêm Vào Giỏ Hàng</button>
+                        </div>
+            
+                        <div class="box b1">
+                            <img src="images/trasoda.png" alt="">
+                            <h3>Trà chanh </h3>
+                            <div class="price">25.000VNĐ</div>
+                            <button class="btn">Thêm Vào Giỏ Hàng</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <button class="read-more">Hiển thị thêm</button>
+        </div>
     </section>
+    
     <section class="products" id="products">
 
-        <h1 class="heading"> sản phẩm <span>khác</span> </h1>
+        <h1 class="heading"> Best<span> Seller</span> </h1>
 
         <div class="box-container">
 
             <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
+                <div class="icons muaa">
+                    <a href="#" class="fas fa-shopping-cart them" onclick="addToCart(event)"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="images/product-1.png" alt="">
+                    <img src="images/trasuaolong.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>Trà Bí Đao</h3>
+                    <h3 class="product-title">Trà sữa ô Long trân châu đường đen</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -195,21 +213,23 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">10.000VND <span>15.000</span></div>
+                    <div class="price">30.000VNĐ</div>
                 </div>
             </div>
+            
+            
+            
 
             <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
+                <div class="icons muaa">
+                    <a href="#" class="fas fa-shopping-cart them" onclick="addToCart(event)"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="images/product-2.jpg" alt="">
+                    <img src="images/oihong.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>Trà Chanh</h3>
+                    <h3>Trà ổi hồng nha đam</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -217,29 +237,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">10.000VND <span>15.000</span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="images/product-3.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Trà Tắc</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price">10.000VND <span>15.000</span></div>
+                    <div class="price">25.000VNĐ</div>
                 </div>
             </div>
 
@@ -255,9 +253,8 @@
 
             <div class="box">
                 <img src="images/quote-img.png" alt="" class="quote">
-                <p>Cà Phê ở quán rất tuyệt vời, đặc biệt view có thể nhìn thấy được thiên nhiên. Với 1 ly cà phê
-                    capuchino sáng sớm làm tôi luôn luôn tràn đầy năng lượng tích cực vào ngày hôm đó. </p>
-                <h3>Vân Anh</h3>
+                <p> Đồ uống ngon </p>
+                <h3>Nhật Phương</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -268,10 +265,8 @@
             </div>
             <div class="box">
                 <img src="images/quote-img.png" alt="" class="quote">
-                <p>Quán sạch sẽ thoáng mát, nước uống rất ngon, tuyệt vời và có nhiều view đẹp, thân là một sinh viên ở
-                    trường thì với một ly cà phê vào mỗi bữa sáng được ngắm nhìn cảnh khuôn viên trường khiến tôi luôn
-                    có năng lượng học tập mạnh mẽ. </p>
-                <h3>Lan Anh</h3>
+                <p> Quán ruột của mình giờ mở bán online nên phải ủng hộ thuiii <3333 </p>
+                <h3>Thu Hiền</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -280,20 +275,6 @@
                     <i class="fas fa-star-half-alt"></i>
                 </div>
             </div>
-
-            <div class="box">
-                <img src="images/quote-img.png" alt="" class="quote">
-                <p>Với không gian quán đặc biệt đẹp, sạch. vào mỗi trưa tôi luôn tới quán để thưởng thức một li trà
-                    chanh mát lạnh sảng khoái, với thời tiết nắng nóng như thế này thì như thế rất là tuyệt đối với tôi.
-                </p>
-                <h3>Nguyễn Thị Thắm</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
             </div>
 
         </div>
@@ -303,12 +284,11 @@
 
     <section class="contact" id="contact">
 
-        <h1 class="heading"> <span>Liên Hệ Với</span> Chúng Tôi </h1>
+        <h1 class="heading"> <span>Địa chỉ</span> Của Quán</h1>
         <div id="map" style="width:500px;height:500px;">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.743405074691!2d108.24999945015908!3d15.974770846151895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314211f3bb84f4db%3A0xd06b5de33a4a6157!2zxJDhuqBJIEjhu4xDIEPDlE5HIE5HSOG7hiBUSMOUTkcgVElOIFbDgCBUUlVZ4buATiBUSMOUTkcgVknhu4ZUIEjDgE4gLSDEkOG6oEkgSOG7jEMgxJDDgCBO4bq0Tkc!5e0!3m2!1svi!2s!4v1653633423711!5m2!1svi!2s"
-                width="1313" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                src="https:////www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245389.60328761404!2d107.93164621640625!3d16.0544563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219c792252a13%3A0x1df0cb4b86727e06!2zxJDDoCBO4bq1bmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1676729045644!5m2!1svi!2s"
+                 width="1313" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="row">
@@ -321,107 +301,25 @@
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="email">
+                    <input type="email" placeholder="Email">
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-phone"></span>
                     <input type="number" placeholder="Số Điện Thoại">
                 </div>
-                <input type="submit" value="Liên Hệ Ngay" class="btn">
+                <input type="submit" value="Liên Hệ Ngay" class="btn" id="lienhe">
             </form>
 
         </div>
 
     </section>
 
-    <section class="blogs" id="blogs">
-
-        <h1 class="heading"> Blogs Của <span>Chúng Tôi</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <div class="image">
-                    <img src="images/blog-1.jpeg" alt="">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">Latte</a>
-                    <span>by Barista's weapons / 21-05-2021 </span>
-                    <p>Chúng ta hẳn biết về cà phê Cappuccino đã được Barista School chia sẻ trước đó. Về thành phần thì
-                        Latte cũng tương tự như Cappuccino. Đó là sự kết hợp của espresso và sữa đánh nóng, nhưng khác
-                        về tỷ lệ.
-
-                    </p>
-                    <p style="display:none">Cà phê Latte có thể pha nóng hoặc pha với đá. Mỗi cách pha đều mang lại một hương vị thú vị
-                        riêng. Nó là một thức uống khá đơn giản nhưng lại rất ngon miệng và hấp dẫn mọi lứa tuổi trên
-                        khắp thế giới. Đây cũng là một loại cà phê mà trẻ em có thể thưởng thức mà không gây tổn hại gì.
-                        Latte được mệnh danh là “cà phê thân thiện” bởi nó phục vụ được cho tất cả mọi đối tượng.</p>
-                    <button class="btnp read-more">Đọc Thêm</button>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="images/blog-2.jpg" alt="">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">Cà Phê Sữa Đá</a>
-                    <span>by VSCA / 11-05-2021</span>
-                    <p>Cà phê sữa đá là món đồ uống quen thuộc hằng ngày với toàn bộ người dân Việt Nam. Nhiều người còn
-                        có thói quen mỗi buổi sáng phải có một ly cà phê sữa đá thì mới bắt đầu một ngày làm việc tỉnh
-                        táo và hứng khởi được. Đây là thức uống “gây nghiện” của nhiều thế hệ, đặc biệt là dân văn
-                        phòng.
-                    </p>
-                    <p style="display:none">Hạt cà phê đến Việt Nam theo dấu chân của người Pháp vào giữa thế kỷ 19. Nhờ thừa hưởng những
-                        điều kiện thuận lợi mà thiên nhiên ban tặng, Việt Nam ta là một quốc gia vô cùng phù hợp để phát
-                        triển tốt giống cà phê Robusta. Và từ lợi thế đó, Việt Nam đã đứng trong top đầu những nước xuất
-                        khẩu cà phê Robusta lớn nhất toàn cầu.</p>
-                    <button class="btnp read-more">Đọc Thêm</button>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="images/blog-3.jpeg" alt="">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">Espressso</a>
-                    <span>by NNT / 11-5-2021</span>
-                    <p>Với những ai yêu thích và sành cà phê thì không còn lạ lẫm gì với espresso và chắc hẳn cũng đều
-                        biết rằng espressso chính là cách thưởng thức cà phê ngon nhất. Vậy “cà phê espresso” và nó khác
-                        gì so với các loại cà phê khác?</p>
-                    <p style="display:none">Có thể khái niệm espresso đã xuất hiện rất nhiều trên các menu
-                        đồ uống tại các quán cà phê ở khắp nơi trên thế giới nhưng không phải nhiều người có thể hiểu rõ
-                        về món đồ uống đặc biệt này.</p>
-                    <button class="btnp read-more">Đọc Thêm</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="commit" id="commit">
-
-        <h1 class="heading"> <span>Cam</span> Kết </h1>
-
-        <div class="row">
-
-            <div class="image">
-                <img src="images/camket.png" alt="">
-            </div>
-
-            <div class="content">
-                <h3>Chúng tôi cam kết </h3>
-                <p>Thời gian giao hàng nhanh chóng trong vòng 15' tại khuôn viên trường ĐH VKU. Quá thời gian giao hàng
-                    quán sẽ free 100% đơn hàng.</p>
-                <p>Với đội ngũ nhân viên trẻ, năng động, sáng tạo luôn làm việc trong môi trường chuyên nghiệp, hòa
-                    đồng, VKU COFFEE hứa hẹn sẽ đem đến cho khách hàng những trải nghiệm tốt nhất.</p>
-            </div>
-
         </div>
 
     </section>
      <section class="footer">
         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="https://www.facebook.com/lin.nguyen.77128" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
         </div>
@@ -429,6 +327,8 @@
 
         <script src="js/script.js"></script>
         <script src="js/cart.js"></script>
+
+        
 </body>
 
 </html>
