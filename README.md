@@ -1,2 +1,0 @@
-# MITEA
-# mitea-website
